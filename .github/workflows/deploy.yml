@@ -1,4 +1,4 @@
-name: Deploy portfolio
+name: Deploy Fitness HQ
 
 on:
   push:
@@ -23,11 +23,18 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
       - name: Install
-        run: npm install
+        run: npm ci
+      - name: Test
+        run: npm test
       - name: Build
         run: npm run build
+      - name: Upload Apps Script bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: surya-fitness-apps-script
+          path: deploy/apps-script/
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:

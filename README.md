@@ -1,46 +1,20 @@
-# Yashaswi Surya — Digital Marketing Portfolio
+# Surya Fitness HQ
 
-Production-ready React + Vite portfolio focused on measurable digital marketing work across retail, media, real estate, travel and performance marketing.
+A personal fitness command centre with React, an owner-only Google Apps Script backend, and a normalized private Google Sheets database. Built for fast check-ins, editable history, workouts, badminton, nutrition, recovery, progress and backups.
 
-## Included
+The GitHub Pages deployment is an **interface preview**. Its optional sandbox is unsaved memory and clears on refresh. Real cloud persistence requires the private Apps Script deployment; no public Sheet or browser-held secret is needed.
 
-- Responsive portfolio landing page
-- 7 selected client case studies
-- Expanded Cellbay flagship case study
-- Interactive case-study modals
-- Proof metrics and growth process
-- About, capabilities and contact sections
-- Mobile-responsive layout
-- GitHub Pages deployment workflow
-- Production metadata for sharing/search previews
-
-## Run locally
-
-```bash
-npm install
+```sh
+npm ci
 npm run dev
-```
-
-## Production build
-
-```bash
+npm test
 npm run build
-npm run preview
 ```
 
-## Deploy
+Use Node 24. The build also generates `deploy/apps-script/Code.gs`, `Index.html`, and `appsscript.json`. The Actions workflow publishes the interface and uploads those files as an artifact.
 
-The repository includes a GitHub Actions workflow at `.github/workflows/deploy.yml`.
+- [Private Google deployment and Sites embedding](docs/DEPLOYMENT.md)
+- [Database schema, historical migration, backup and recovery](docs/DATA-AND-RECOVERY.md)
+- [Validation and remaining Google account checks](docs/TEST-REPORT.md)
 
-One GitHub setting is required once:
-
-1. Open **Settings → Pages**
-2. Under **Build and deployment**, choose **GitHub Actions**
-3. Save
-4. Pushes to `main` build and deploy automatically
-
-The Contact section intentionally does not invent a personal email address. Add your preferred professional email or LinkedIn URL in `src/main.jsx` before public launch.
-
-Client figures are presented as portfolio evidence and labeled as reported/recorded where appropriate. Confidential or NDA-restricted material should remain omitted.
-
-Repository: https://github.com/Yashaswisurya/Yashaswis-GPT-Repo
+Historical fitness HTML/JSON was not supplied, so no personal records are fabricated or seeded. Provide the original merged backup for a reviewed migration. The marketing portfolio remains in the original repository and its earlier commits; this repository now contains the fitness application.

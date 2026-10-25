@@ -3,3 +3,8 @@ dist/
 .env
 .env.*
 .DS_Store
+
+deploy/
+
+# User-supplied brief contains private health details. Keep local only.
+docs/PRODUCT-BRIEF.md
